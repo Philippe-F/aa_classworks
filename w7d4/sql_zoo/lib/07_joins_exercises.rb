@@ -185,7 +185,7 @@ def prolific_actors
   GROUP BY 
   actors.name 
   HAVING 
-  COUNT(castings.ord = 1) >= 15
+  COUNT(castings.ord = 1) >= 15 
   ORDER BY 
   actors.name ASC
   SQL
@@ -204,10 +204,9 @@ def films_by_cast_size
   WHERE
   movies.yr = 1978
   GROUP BY 
-  movies.title
+  movies.title 
   ORDER BY 
-  COUNT(castings.ord) DESC, movies.title ASC
-
+  COUNT(castings.ord) DESC, movies.title ASC 
   SQL
 end
 
