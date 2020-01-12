@@ -25,33 +25,38 @@ require_relative '../data/query_setup.rb'
 # There are no specs for this part of the project.
 
 # This file is set up so that when you invoke the method below 
-# you can run the query by inputting the following in your terminal: ruby lib/index_problems.rb
-# The terminal results will "puts" out onto new lines (similiar to how it looks in psql). 
-# Or you can test your queries with pure SQL in psql!
+# you can run the query by inputting the following in your terminal: 
+# ruby lib/index_problems.rb The terminal results will "puts" out onto 
+# new lines (similiar to how it looks in psql). Or you can test your queries 
+# with pure SQL in psql!
 
 # REMINDER: INDEX ONLY AS NEEDED. 
 # The flow for this part of the project will be to run the query as it is
 # to see which parts of the query might be slowing you down. 
-# (Is there a sequence scan with a high total cost? Maybe a Nested Loop with a high total cost?)
+# (Is there a sequence scan with a high total cost? Maybe a Nested 
+# Loop with a high total cost?)
 
-# Create an index based on your ideas and see if the total cost for that query is improved. 
+# Create an index based on your ideas and see if the total cost for 
+# that query is improved. 
 
-# If the total cost does not fall within the specified range, drop that index using:
+# If the total cost does not fall within the specified range, drop 
+# that index using:
+
 # DROP INDEX index_name;
 
 # Once that query has reached the desired range move on to the next problem. 
 
 
 def example_index_problem
-  # This query can be improved by creating an index for cats.name in your database!
-  # Try with and without the index to see the improvement.
+  # This query can be improved by creating an index for cats.name 
+  # in your database! Try with and without the index to see the improvement.
 
   # Get cost within the range of: 4..15
 
   # In the Meowtime postgres database you can run the following to add an index:
   # CREATE INDEX cats_name ON cats(name);
   execute(<<-SQL)
-    EXPLAIN
+    EXPLAIN 
       SELECT
         cats.name
       FROM
@@ -65,9 +70,11 @@ example_index_problem
 
 def toy_time
   # This query will find the price of the most expensive toy named 'Kiss'.
-  # Now create an index in your database that will make this query more efficient.
+  # Now create an index in your database that will make this 
+  # query more efficient.
   
-  # HINT: look at which node of the query plan is most costly? The Sort? The Seq Scan?
+  # HINT: look at which node of the query plan is most costly? The Sort? 
+  # The Seq Scan?
   
   # REMINDER: Only one index is needed per problem! 
   # Get cost within the range of: 32..40
@@ -108,7 +115,8 @@ def who_owns_thumbs_up
   # This query lists the name of the 'Pink' colored cat who 
   # owns the toy named 'Thumbsup'.
   # Look at the Query Plan and notice the Seq Scan -
-  # What kind of scan would be more efficent and what index could you create that would help?
+  # What kind of scan would be more efficent and what index 
+  # could you create that would help?
 
   # Get cost within the range of: 4..150
   execute(<<-SQL)
@@ -127,7 +135,8 @@ def who_owns_thumbs_up
 end
 
 def popular_toys
-  # Jet the cat has a ton of toys! This query shows the toys Jet has at least two copies of. 
+  # Jet the cat has a ton of toys! 
+  # This query shows the toys Jet has at least two copies of. 
   # Add the index that will make this query much more efficient!
 
   # Get cost within the range of: 30..40

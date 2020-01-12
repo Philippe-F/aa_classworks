@@ -207,7 +207,7 @@ def start_at_craiglockhart
     FROM 
     stops
     WHERE
-    stops.name = 'Craiglockhart' 
+    stops.name = 'Craiglockhart'  
   )
   SQL
 end
