@@ -1,15 +1,21 @@
 class AttrAccessorObject
 
+  # Create getter/ setter methods for all the attribute names
+  # sent in as array argument -- using define_method
   def self.my_attr_accessor(*names)
+    
+    names.each do |attr_name|
+      # create getters for the given attributes
+      define_method("#{attr_name}") do 
+        self.instance_variable_get("@#{attr_name}")
+      end
 
-    names.each do |method_name|
-      define_method(method_name) do
-        self.instance_variable_get("@#{method_name}") 
-      end 
+      # create setters for the attributes
+      define_method("#{attr_name}=") do |value|
+        self.instance_variable_set("@#{attr_name}" , value)
+      end
 
-      define_method("#{method_name}=") do |method_val|
-        self.instance_variable_set("@#{method_name}", method_val) 
-      end 
-    end 
+    end
+
   end
 end
