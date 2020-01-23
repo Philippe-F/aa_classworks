@@ -1,8 +1,13 @@
 class UsersController < ApplicationController
 
     def index
-        users = User.all 
-        render json: users 
+        if params.has_key?(:username)
+            user = User.find_by(username: params[:username])
+            render json: user
+        else
+            users = User.all 
+            render json: users 
+        end
     end
 
     def create
@@ -23,11 +28,13 @@ class UsersController < ApplicationController
          
     end 
 
-    def update
+    def update 
         user = User.find(params[:id])
         
         if user.update(user_params)
             render json: user
+        else 
+            render json: user.errors.full_messages, status: 422
         end     
     end
 
@@ -40,6 +47,6 @@ class UsersController < ApplicationController
 
     private
     def user_params
-        params.require(:user).permit(:name, :email)
+        params.require(:user).permit(:username) 
     end 
 end
