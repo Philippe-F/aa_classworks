@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NinetyNineCats</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <% if logged_in? %>
+    Hello <%= current_user.username %>!
+    <%= button_to("Logout!", destroy_session_url, { action: "destroy" }) %>
+    <% end %>
+    test
+    <%= yield %>
+  </body>
+</html>

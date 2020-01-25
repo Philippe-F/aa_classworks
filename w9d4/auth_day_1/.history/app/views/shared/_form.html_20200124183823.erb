@@ -1,0 +1,10 @@
+<%= form_for(url: url, method: 'post', model: user ) do |form| %> 
+    <%= form.label(:username, 'Username:') %>
+    <%= form.text_field(:username) %>
+
+    <%= form.label(:password, 'Password:') %>
+    <%= form.text_field(:password) %>
+    
+    <%= form.submit('Submit') %> 
+<% end %>
+
