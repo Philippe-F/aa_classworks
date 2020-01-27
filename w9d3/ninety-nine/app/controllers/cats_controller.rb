@@ -6,10 +6,11 @@ class CatsController < ApplicationController
 
   def create
     @cat = Cat.new(cat_params)
+
     if @cat.save
-      redirect_to cat_url(cat.id)
+      redirect_to cat_url(@cat.id)
     else
-      render :new
+      @cat.errors
     end
     
   end
@@ -45,6 +46,9 @@ class CatsController < ApplicationController
   end
 
   def destroy
+    @cat = Cat.find_by[id: params[:id]] 
+    @cat.destroy 
+    redirect_to cats_url 
   end
 
   private

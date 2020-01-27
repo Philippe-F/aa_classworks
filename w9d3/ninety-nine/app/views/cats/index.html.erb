@@ -1,5 +1,8 @@
 <h1>Cats Index</h1>
-
-<% @cats.each do |cat|  %>
-  <%= render cat %>
-<% end %>
+ 
+ <ul>
+  <% @cat.each do |cat|  %>
+    <li><a href="http://localhost:3000/cats/<%= cat.id %>">
+    <%= cat.name %></a></li>
+  <% end %>
+</ul>
