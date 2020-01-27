@@ -685,3 +685,826 @@ Did you mean?  user_path:
 
 Started POST "/__better_errors/331f524f62d0430e/variables" for ::1 at 2020-01-27 18:01:11 -0500
 Started POST "/__better_errors/331f524f62d0430e/eval" for ::1 at 2020-01-27 18:05:23 -0500
+Started GET "/users/action_url" for ::1 at 2020-01-27 18:07:35 -0500
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started POST "/__better_errors/c52b6d9ce27d184c/variables" for ::1 at 2020-01-27 18:07:35 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 18:07:50 -0500
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/PhilippeFonzin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 268ms (Views: 245.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:07:51 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:07:58 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"M1nUnlsU7rBoOZryd4XWfk9FIexYCnsmhR7XxAoFOlj3DrzG7hODod899JSx+E6Y7tTOsPy4ASzuQPSBat4KfA==", "user"=>{"email"=>"philippe1", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `user_params' for #<UsersController:0x00007fb31062c490>
+Did you mean?  user_path:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/__better_errors/83c91518e66ece8a/variables" for ::1 at 2020-01-27 18:07:58 -0500
+Started POST "/__better_errors/83c91518e66ece8a/eval" for ::1 at 2020-01-27 18:08:36 -0500
+Started POST "/__better_errors/83c91518e66ece8a/eval" for ::1 at 2020-01-27 18:08:43 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 18:09:40 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 46ms (Views: 32.3ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:09:44 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"/yCib2G+B7kG1jHYH14r+tbmnf8AicykJpJHvkVzK0Q7d8o31LlqqLHSX77ZI7Mcd3dyo6Q7tq5NzGT7JagbYA==", "user"=>{"email"=>"philippe1", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 273ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `user_params' for #<UsersController:0x00007fb314fc2898>
+Did you mean?  user_path:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/__better_errors/f2c7ee7dbef2e67c/variables" for ::1 at 2020-01-27 18:09:45 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 18:13:30 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 65ms (Views: 46.6ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:13:35 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"+sDR6KiEnivQ0NJC8cIAEDVZZ+mjvsHh9WPlGTSU6eQ+l7mwHYPzOmfUvCQ3v5j2lMiItQcMu+uePcZcVE/ZwA==", "user"=>{"email"=>"philippe1", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "philippe1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$itfvWVaojfZBuLp6M84bF.UBOOT1nHPvd8eoW/8i5dyTi4JGyDHXa"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "philippe1"], ["password_digest", "$2a$12$itfvWVaojfZBuLp6M84bF.UBOOT1nHPvd8eoW/8i5dyTi4JGyDHXa"], ["session_token", "tGPxhMnN5kkp8I7VPh5BEg"], ["created_at", "2020-01-27 23:13:36.144438"], ["updated_at", "2020-01-27 23:13:36.144438"]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:11
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 265ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/users/1" for ::1 at 2020-01-27 18:13:36 -0500
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started POST "/__better_errors/68296739627998d2/variables" for ::1 at 2020-01-27 18:13:36 -0500
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users/new" for ::1 at 2020-01-27 18:16:05 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 52ms (Views: 40.1ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:16:20 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"SoERRd2iDJ3mluzM+OabAGAWw/rDHw8T/bw6hEa5j1GO1nkdaKVhjFGSgqo+mwPmwYcspmetdRmW4hnBJmK/dQ==", "user"=>{"email"=>"nikki1", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nikki1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$dGAEuN0ZhpcHpEeuB6xrf.wReP44LJ220rt/XBaebbm1rFYFiIDle"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "nikki1"], ["password_digest", "$2a$12$dGAEuN0ZhpcHpEeuB6xrf.wReP44LJ220rt/XBaebbm1rFYFiIDle"], ["session_token", "5WcoMqMiFORJncRFkeVOsw"], ["created_at", "2020-01-27 23:16:20.663586"], ["updated_at", "2020-01-27 23:16:20.663586"]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:11
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 262ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/2" for ::1 at 2020-01-27 18:16:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 32.1ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users" for ::1 at 2020-01-27 18:21:57 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"SoERRd2iDJ3mluzM+OabAGAWw/rDHw8T/bw6hEa5j1GO1nkdaKVhjFGSgqo+mwPmwYcspmetdRmW4hnBJmK/dQ==", "user"=>{"email"=>"ron1", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ron1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$LpvcaklU9J32qWfy8KXTS.TCEwIZvW.iAMXDeUvcI5sp2jYwppSpa"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 345ms (Views: 42.1ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:22:12 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:22:21 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"1kegYlyYBwKBa64jnN4+iI56EmN+CV1bhsH3XOtCYSkSEMg66Z9qEzZvwEVao6ZuL+v9P9q7J1Htn9QZi5lRDQ==", "user"=>{"email"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$XnfsCU6if1wRSWQZ/T9EYenfDE7Ymgj3/983ki9hf7ljkNGBAtFzq"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 283ms (Views: 25.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:22:27 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:22:27 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:22:27 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.5ms)
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:22:27 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.5ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:22:28 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (27.9ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:22:28 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:22:28 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:22:28 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:22:32 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"pZcitjsofql2o2nrgUCYZon8IHuDDNI2V+IscSJU9CNhwEruji8TuMGnB41HPQCAKG3PJye+qDw8vA80Qo/EBw==", "user"=>{"email"=>"bbfb", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bbfb"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$9N1JkIvNFP4SwdXwIUzWseIpurYCopRPnVcN/osQsCMlRCtYfTXMm"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 281ms (Views: 22.9ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users/new" for ::1 at 2020-01-27 18:24:57 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 46ms (Views: 31.7ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:25:02 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"tbErki6DopU75zDhZP/CjNb0nhNnbZ+kHSfyDtcIjUhx5kPKm4TPhIzjXoeiglpqd2VxT8Pf5a52edFLt9O9bA==", "user"=>{"email"=>"bf", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$X.PlXW6uMjizcdfbDckvh.Arf4leY0tc4RmiOsm4i9Yo.MC4fZggG"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 284ms (Views: 21.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:26:49 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:26:49 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:26:50 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:26:50 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:26:56 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"HATxn9nWOgzYSvzyTifPnhUZP2SNRKhX4B9sQ57C9y3YU5nHbNFXHW9OkpSIWld4tIjQOCn20l2LQU8G/hnHCQ==", "user"=>{"email"=>"bbfgb", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bbfgb"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$Nxpq8sC.eMWrPW3khA3YkeE.IL.b1Fspxf2EApPbas1DaX28522cm"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 423ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:26:59 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"HATxn9nWOgzYSvzyTifPnhUZP2SNRKhX4B9sQ57C9y3YU5nHbNFXHW9OkpSIWld4tIjQOCn20l2LQU8G/hnHCQ==", "user"=>{"email"=>"bbfgb", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bbfgb"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$RV3a4oQy/qiorPGakg6x8uF9KgT/e2rSiLY.G8zEepjNB.inxFVHm"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 427ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:27:00 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"HATxn9nWOgzYSvzyTifPnhUZP2SNRKhX4B9sQ57C9y3YU5nHbNFXHW9OkpSIWld4tIjQOCn20l2LQU8G/hnHCQ==", "user"=>{"email"=>"bbfgb", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bbfgb"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$QbDQIrF.X7Cxe0J.F4xTh.mA2sTrtTmLiQl8Oc9S8EUOGSAFHZgLO"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 425ms (ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:27:22 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"HATxn9nWOgzYSvzyTifPnhUZP2SNRKhX4B9sQ57C9y3YU5nHbNFXHW9OkpSIWld4tIjQOCn20l2LQU8G/hnHCQ==", "user"=>{"email"=>"bbfgb", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bbfgb"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$yOwfElrgUxCn2MevwBbPnuRp2DWokgcwWXAUnBFuAQZ8EipteyJQu"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 431ms (ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:27:23 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"HATxn9nWOgzYSvzyTifPnhUZP2SNRKhX4B9sQ57C9y3YU5nHbNFXHW9OkpSIWld4tIjQOCn20l2LQU8G/hnHCQ==", "user"=>{"email"=>"bbfgb", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bbfgb"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$s.o.WECQJwQWkYCPLaA0LuEBMvFPf/0RUdjYnpDfIQSRot.eyPbQm"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 419ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:27:23 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"HATxn9nWOgzYSvzyTifPnhUZP2SNRKhX4B9sQ57C9y3YU5nHbNFXHW9OkpSIWld4tIjQOCn20l2LQU8G/hnHCQ==", "user"=>{"email"=>"bbfgb", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bbfgb"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$P7vlHhL/J3EyMbdTgZ1xduDGz33cNVK8jVjGeXvEvGSTqUMcsCJQq"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 440ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:28:19 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 51ms (Views: 31.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:28:19 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered users/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:28:24 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"OnSSFZ53EvBMZc4jpFCuPYJUs15vnPJ4zILpvTtW3qn+I/pNK3B/4fthoEViLTbbI8VcAssuiHKn3Mr4W43ujQ==", "user"=>{"email"=>"gf", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$wmu18WSXb5Etv6McoE4sCuy3bPe9lbek.gsCU2pOGeiLbwS.BpCZG"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 417ms (ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:28:25 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"OnSSFZ53EvBMZc4jpFCuPYJUs15vnPJ4zILpvTtW3qn+I/pNK3B/4fthoEViLTbbI8VcAssuiHKn3Mr4W43ujQ==", "user"=>{"email"=>"gf", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$jY/YlX9p13Ykq76GZ//VPuhO0VGYiii.043glvlsElSDDhuQcG17i"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+Started POST "/users" for ::1 at 2020-01-27 18:28:25 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"OnSSFZ53EvBMZc4jpFCuPYJUs15vnPJ4zILpvTtW3qn+I/pNK3B/4fthoEViLTbbI8VcAssuiHKn3Mr4W43ujQ==", "user"=>{"email"=>"gf", "password"=>"[FILTERED]"}}
+Started POST "/users" for ::1 at 2020-01-27 18:28:25 -0500
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (6.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$0sqPa/qwcy5AZuDENCfj.Od91nBhg8xvFlkur0AXhJToxQGQd7NKq"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+Started POST "/users" for ::1 at 2020-01-27 18:28:25 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"OnSSFZ53EvBMZc4jpFCuPYJUs15vnPJ4zILpvTtW3qn+I/pNK3B/4fthoEViLTbbI8VcAssuiHKn3Mr4W43ujQ==", "user"=>{"email"=>"gf", "password"=>"[FILTERED]"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"OnSSFZ53EvBMZc4jpFCuPYJUs15vnPJ4zILpvTtW3qn+I/pNK3B/4fthoEViLTbbI8VcAssuiHKn3Mr4W43ujQ==", "user"=>{"email"=>"gf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Exists (261.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gf"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gf"], ["LIMIT", 1]]
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$5/XtItUvV5wvJoGcAaPqTOhBWncoLvg0ahRzEUvv5Ei.a65POIFfa"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$/Mmc8QF1.w4tKsTnUR.efeb1VDUd5cs2b7.0c0VqsbB1rdIhMtYny"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 1323ms (ActiveRecord: 1.0ms)
+
+
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 1385ms (ActiveRecord: 9.7ms)
+
+
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 895ms (ActiveRecord: 4.6ms)
+
+
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 1245ms (ActiveRecord: 264.8ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:28:37 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"OnSSFZ53EvBMZc4jpFCuPYJUs15vnPJ4zILpvTtW3qn+I/pNK3B/4fthoEViLTbbI8VcAssuiHKn3Mr4W43ujQ==", "user"=>{"email"=>"gf", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$WO4T7O5.wBSB5/oFtRiSnukZTtq/NCBoPMQ6CmnxDbcM0il6H8yDm"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 438ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:29:00 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 54ms (Views: 34.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:29:00 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:29:05 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"o2zsMlNF4Qi9XUfczmodi44nxx/jC+FwbpTixfC4vtRnO4Rq5kKMGQpZKboIF4VtL7YoQ0e5m3oFysGAkGOO8A==", "user"=>{"email"=>"gg", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gg"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$.s6/z4d6hIM50Leelc3Cgu5oicFEFS/bMvlQgrBtL44q/4EKP90qK"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 419ms (ActiveRecord: 1.2ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users" for ::1 at 2020-01-27 18:33:40 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"o2zsMlNF4Qi9XUfczmodi44nxx/jC+FwbpTixfC4vtRnO4Rq5kKMGQpZKboIF4VtL7YoQ0e5m3oFysGAkGOO8A==", "user"=>{"email"=>"gg", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gg"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$F.uDLjnug7Aw1h91dW.IhuCI7pleEgTLQDPYZf55zyTfcIIX3EzcW"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 456ms (ActiveRecord: 6.9ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:40:06 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"o2zsMlNF4Qi9XUfczmodi44nxx/jC+FwbpTixfC4vtRnO4Rq5kKMGQpZKboIF4VtL7YoQ0e5m3oFysGAkGOO8A==", "user"=>{"email"=>"gg", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gg"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$8E5YjNI3/fEVjg2CtCsX/uQmCJqnaoQS2QD/G81onuGkAp7/wS5EC"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 455ms (ActiveRecord: 11.9ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:40:08 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"o2zsMlNF4Qi9XUfczmodi44nxx/jC+FwbpTixfC4vtRnO4Rq5kKMGQpZKboIF4VtL7YoQ0e5m3oFysGAkGOO8A==", "user"=>{"email"=>"gg", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gg"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$.4CW9enoUCHg32O6J7FT9OSx5cAyLz1VgUWp7ful3sed8C4N1hiiG"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 426ms (ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:40:54 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"o2zsMlNF4Qi9XUfczmodi44nxx/jC+FwbpTixfC4vtRnO4Rq5kKMGQpZKboIF4VtL7YoQ0e5m3oFysGAkGOO8A==", "user"=>{"email"=>"ron1", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ron1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$mF5G/wjhDnAmfIfmdWC/3.RX.w99pE3p4k8w/6g1UxKlhHRtFqNjO"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "ron1"], ["password_digest", "$2a$12$mF5G/wjhDnAmfIfmdWC/3.RX.w99pE3p4k8w/6g1UxKlhHRtFqNjO"], ["session_token", "Zzo9qS7PXqRdN3jpWKFyGA"], ["created_at", "2020-01-27 23:40:55.213801"], ["updated_at", "2020-01-27 23:40:55.213801"]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:11
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 3.0ms)
+
+
+
+NoMethodError - undefined method `reset_session_token!' for #<User:0x00007fb314dfda08>
+Did you mean?  reset_session_token
+               restore_session_token!:
+  app/controllers/application_controller.rb:6:in `login'
+  app/controllers/users_controller.rb:12:in `create'
+
+Started POST "/__better_errors/3f5999bf44d3a6f1/variables" for ::1 at 2020-01-27 18:40:55 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 18:42:08 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 47ms (Views: 32.7ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:42:15 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"46caw7bt2YCifWQnQ9Z6j8TUHBwW0Xi/f0JVz7W1c3Mn8HKbA+q0kRV5CkGFq+JpZUXzQLJjArUUHHaK1W5DVw==", "user"=>{"email"=>"ron1", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ron1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$lP3ExWVw63HQDoNnVQiUA.UKcxDPkh.j/R3Z0KJoCJD8IAmasQrQm"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 417ms (ActiveRecord: 1.1ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users" for ::1 at 2020-01-27 18:43:21 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"46caw7bt2YCifWQnQ9Z6j8TUHBwW0Xi/f0JVz7W1c3Mn8HKbA+q0kRV5CkGFq+JpZUXzQLJjArUUHHaK1W5DVw==", "user"=>{"email"=>"chris1", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "chris1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$RZA89cph7iplOlKcgwXENem7hWl.E5y3OsyUCOF337upDlUdNwu0e"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "chris1"], ["password_digest", "$2a$12$RZA89cph7iplOlKcgwXENem7hWl.E5y3OsyUCOF337upDlUdNwu0e"], ["session_token", "A0ucsFVB0_6k2DdPfMo8xA"], ["created_at", "2020-01-27 23:43:22.258674"], ["updated_at", "2020-01-27 23:43:22.258674"]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:25
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "chris1"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:25
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["password_digest", "$2a$12$RZA89cph7iplOlKcgwXENem7hWl.E5y3OsyUCOF337upDlUdNwu0e"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:25
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "h6COT05Yr2Gz1C15fRKdFQ"], ["updated_at", "2020-01-27 23:43:22.265902"], ["id", 4]]
+  ↳ app/models/user.rb:25
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:25
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 269ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/users/4" for ::1 at 2020-01-27 18:43:22 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 18:43:30 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:43:36 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"lx7tadyhqtA4l8et2TipxXveBgOs2Ym//d3L4ITVBj1TSYUxaabHwY+TqcsfRTEj2k/pXwhr87WWg+il5A42GQ==", "user"=>{"email"=>"gf", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$GG1Ki7aiPpibSdy7p5yIt.lICUpEIdqyN7CYeO038kXNGxC3LDONq"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 434ms (ActiveRecord: 1.2ms)
+
+
+Started POST "/__better_errors/c52b6d9ce27d184c/variables" for ::1 at 2020-01-27 18:53:43 -0500
+Started GET "/users/action_url" for ::1 at 2020-01-27 18:53:49 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"action_url"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:36
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 4.6ms)
+
+
+
+NoMethodError - undefined method `email' for nil:NilClass:
+  app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb___2514302061313670860_70203563630800'
+  app/controllers/users_controller.rb:37:in `show'
+
+Started POST "/__better_errors/31d104af2dd8de5d/variables" for ::1 at 2020-01-27 18:53:49 -0500
+Started GET "/users/action_url" for ::1 at 2020-01-27 18:53:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"action_url"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:36
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `email' for nil:NilClass:
+  app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb___2514302061313670860_70203559617580'
+  app/controllers/users_controller.rb:37:in `show'
+
+Started POST "/__better_errors/8bdeacb69e3ff959/variables" for ::1 at 2020-01-27 18:53:50 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 18:53:56 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 58ms (Views: 40.6ms | ActiveRecord: 10.8ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:54:02 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"Q/isoirbnepjYVlJkdIDW1ocOHnwM3C4+Lw669DbEimHr8T6n9zw+9RlNy9Xr5u9+43XJVSBCrKT4hmusAAiDQ==", "user"=>{"email"=>"g", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "g"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$g5JJCMwNFl48rz1FaW6Rx.51pkGkiit2Ss55OoNWgPbSscWmTi5ki"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 286ms (Views: 27.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:54:47 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"9+0m/1kk0kqekoAeIa7JfkeP5aL+Aflr23F2ohzJD4Ezuk6n7CO/WymW7njn01GY5h4K/lqzg2GwL1XnfBI/pQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$IiPt3WxNX33VmLgWvwbw9.bY10wG10T4HrurPyA3hoh3H8fkvJKLi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.5ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 293ms (Views: 31.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:55:05 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"hx/PjwSw0SIz2rsemJAdf8pSvbZznH9/YWhp29ShIgdDSKfXsbe8M4Te1Xhe7YWZa8NS6tcuBXUKNkqetHoSIw==", "user"=>{"email"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$AwRnojL3E4Kg2di5e7VcVejdtSiYOBdmyJlvZVgOI/1g96M0XnuPO"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "test"], ["password_digest", "$2a$12$AwRnojL3E4Kg2di5e7VcVejdtSiYOBdmyJlvZVgOI/1g96M0XnuPO"], ["session_token", "y9xJWLfMuJzEf5iY0_YDbg"], ["created_at", "2020-01-27 23:55:05.676813"], ["updated_at", "2020-01-27 23:55:05.676813"]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:25
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/user.rb:25
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["password_digest", "$2a$12$AwRnojL3E4Kg2di5e7VcVejdtSiYOBdmyJlvZVgOI/1g96M0XnuPO"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/user.rb:25
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "fZisrWFOx9CPezflNfcAXg"], ["updated_at", "2020-01-27 23:55:05.685013"], ["id", 5]]
+  ↳ app/models/user.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:25
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 269ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/users/5" for ::1 at 2020-01-27 18:55:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:36
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.4ms)
+
+

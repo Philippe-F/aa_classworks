@@ -9,16 +9,17 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save 
+      login(@user) 
       redirect_to user_url(@user.id) 
     else 
-      flash[:errors] = @user.errors.full_messages
+      flash.now[:errors] = @user.errors.full_messages
+      render :new
     end 
   end
 
   def edit
     @user = User.find_by(id: params[:id]) 
     render :edit 
-    end 
   end
 
   def update
@@ -28,7 +29,13 @@ class UsersController < ApplicationController
       redirect_to user_url(@user.id) 
     else 
       flash[:errors] = @user.errors.full_messages
+    end 
   end
+
+  def show
+    @user = User.find_by(id: params[:id])
+    render :show
+  end 
 
   def destroy
     @user = User.find_by(id: params[:id]) 
