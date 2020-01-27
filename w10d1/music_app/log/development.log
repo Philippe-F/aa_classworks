@@ -48,3 +48,640 @@ Migrating to CreateUsers (20200127174425)
   ↳ bin/rails:9
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/users" for ::1 at 2020-01-27 16:07:54 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/PhilippeFonzin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 828ms (Views: 814.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 16:08:03 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 11.5ms)
+
+
+
+NoMethodError - undefined method `url_safe' for SecureRandom:Module:
+  app/models/user.rb:30:in `ensure_session_token!'
+  app/controllers/users_controller.rb:4:in `new'
+
+Started POST "/__better_errors/0a97f54891059070/variables" for ::1 at 2020-01-27 16:08:03 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 16:09:23 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 4.6ms)
+
+
+
+NoMethodError - undefined method `urlsafe' for SecureRandom:Module:
+  app/models/user.rb:30:in `ensure_session_token!'
+  app/controllers/users_controller.rb:4:in `new'
+
+Started POST "/__better_errors/f61fa922cad1901d/variables" for ::1 at 2020-01-27 16:09:23 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 16:09:47 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 5.3ms)
+
+
+
+SyntaxError - syntax error, unexpected tLABEL
+...@output_buffer.append=( action: :new, user: @user, render "f...
+...                        ^~~~~~~
+/Users/PhilippeFonzin/Desktop/aa_classworks/w10d1/music_app/app/views/users/new.html.erb:3: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...on: :new, user: @user, render "form" );@output_buffer.safe_a...
+...                              ^:
+  app/views/users/new.html.erb:3:in `'
+  app/controllers/users_controller.rb:5:in `new'
+
+Started POST "/__better_errors/c62e1dc1d5357f1d/variables" for ::1 at 2020-01-27 16:09:47 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 16:13:44 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.6ms)
+  Rendered users/new.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_then or ';' or '\n'
+...w::OutputBuffer.new; if action: :edit 
+...                              ^
+/Users/PhilippeFonzin/Desktop/aa_classworks/w10d1/music_app/app/views/users/_form.html.erb:22: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/users/_form.html.erb:1:in `'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___3410785537502971825_70141577338420'
+  app/controllers/users_controller.rb:5:in `new'
+
+Started POST "/__better_errors/4b9064c831d11219/variables" for ::1 at 2020-01-27 16:13:44 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 16:16:24 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (333.1ms)
+  Rendered users/new.html.erb within layouts/application (336.2ms)
+Completed 500 Internal Server Error in 348ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `edit' for #<#<Class:0x00007f9633982440>:0x00007f9632b39fc8>
+Did you mean?  exit:
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___971772992693797485_70141536189400'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___3410785537502971825_70141536224860'
+  app/controllers/users_controller.rb:5:in `new'
+
+Started POST "/__better_errors/d54ae2520e2d2c20/variables" for ::1 at 2020-01-27 16:16:25 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 16:16:35 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 16:17:02 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (427.0ms)
+  Rendered users/new.html.erb within layouts/application (429.8ms)
+Completed 500 Internal Server Error in 439ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `selected' for #<#<Class:0x00007f9633982440>:0x00007f9632b392a8>
+Did you mean?  select:
+  app/views/users/_form.html.erb:12:in `_app_views_users__form_html_erb___971772992693797485_70141546451460'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___3410785537502971825_70141578018040'
+  app/controllers/users_controller.rb:5:in `new'
+
+Started POST "/__better_errors/8335430dd75c6320/variables" for ::1 at 2020-01-27 16:17:03 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 16:17:17 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (460.8ms)
+  Rendered users/new.html.erb within layouts/application (465.7ms)
+Completed 500 Internal Server Error in 476ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `selected' for #<#<Class:0x00007f9633982440>:0x00007f9637b79e48>
+Did you mean?  select:
+  app/views/users/_form.html.erb:12:in `_app_views_users__form_html_erb___971772992693797485_70141583366900'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___3410785537502971825_70141578298780'
+  app/controllers/users_controller.rb:5:in `new'
+
+Started POST "/__better_errors/c033115a980f104e/variables" for ::1 at 2020-01-27 16:17:18 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 16:20:13 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 16:22:22 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+...(action == :edit) ? Update User : Create User );@output_buff...
+...                           ^~~~:
+  app/views/users/_form.html.erb:22:in `'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___3410785537502971825_70141533425880'
+  app/controllers/users_controller.rb:5:in `new'
+
+Started POST "/__better_errors/b913b73385cff8ba/variables" for ::1 at 2020-01-27 16:22:22 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 16:22:43 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 16:22:52 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 16:23:08 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 16:23:25 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 16:23:36 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 16:23:57 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/bdf9681472c1adf9/variables" for ::1 at 2020-01-27 16:23:57 -0500
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 16:40:25 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/d363d6d4f48c8c0e/variables" for ::1 at 2020-01-27 16:40:25 -0500
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 16:41:29 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/e5bf8b7a5e5cb6b2/variables" for ::1 at 2020-01-27 16:41:29 -0500
+Started POST "/__better_errors/e5bf8b7a5e5cb6b2/variables" for ::1 at 2020-01-27 16:46:04 -0500
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 16:46:34 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/3071bd4c70881dd1/variables" for ::1 at 2020-01-27 16:46:34 -0500
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 16:52:11 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/c9365880a4f2a71c/variables" for ::1 at 2020-01-27 16:52:11 -0500
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 16:53:12 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/5ca3c90517d02319/variables" for ::1 at 2020-01-27 16:53:13 -0500
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 17:02:31 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/a093cda5b99125f7/variables" for ::1 at 2020-01-27 17:02:31 -0500
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 17:03:49 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/cd2888dac1bec329/variables" for ::1 at 2020-01-27 17:03:49 -0500
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 17:04:44 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/0f17d0fa6a71a341/variables" for ::1 at 2020-01-27 17:04:44 -0500
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 17:05:01 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/PhilippeFonzin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/e581ae03a45512a0/variables" for ::1 at 2020-01-27 17:05:02 -0500
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 17:05:15 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"test", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/ebf90d7a39878e8e/variables" for ::1 at 2020-01-27 17:05:15 -0500
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 17:09:30 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"test", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 8ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/7b30e6275b2a97ce/variables" for ::1 at 2020-01-27 17:09:30 -0500
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 17:13:29 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"test", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/d23d1b76bf385af1/variables" for ::1 at 2020-01-27 17:13:30 -0500
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 17:16:50 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"test", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/e0e279b64ea359e6/variables" for ::1 at 2020-01-27 17:16:50 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 17:16:56 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.8ms)
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 714ms (Views: 635.8ms | ActiveRecord: 18.2ms)
+
+
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 17:17:00 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"kxHaQWB11yPe9DsgFwBFaAjZ6tpfyiHzseGtzPrVNRBXRrIZ1XK6MmnwVUbRfd2OqUgFhvt4W/nav46Jmg4FNA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+  Rendering users/update.html.erb within layouts/application
+  Rendered users/update.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 61ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 17:19:04 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 76ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 17:23:54 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"SOr3yrnTgBgDJrq/wf3rz4iEk159+332CEoHh3l4LI6MvZ+SDNTtCbQi1NkHgHMpKRV8AtlJB/xjFCTCGaMcqg==", "user"=>{"email"=>"philippe2", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+  Rendering users/update.html.erb within layouts/application
+  Rendered users/update.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 75ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 17:24:06 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered shared/_errors.html.erb (1.1ms)
+  Rendered users/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 130ms (Views: 93.1ms | ActiveRecord: 12.6ms)
+
+
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 17:24:14 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"6BKo0EGugWUopEWhZPnto4W2OKGQFG+oofihJxOoCIMsRcCI9KnsdJ+gK8eihHVFJCfX/TSmFaLKpoJic3M4pw==", "user"=>{"email"=>"philippe3", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+  Rendering users/update.html.erb within layouts/application
+  Rendered users/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 83ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 17:25:04 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/PhilippeFonzin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 859ms (Views: 806.3ms | ActiveRecord: 11.2ms)
+
+
+Started PATCH "/users/action_url" for ::1 at 2020-01-27 17:25:12 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"+ntHsqGiHeKgO3GCTNRt/wFumuXheoMYu1A460L2CzE+LC/qFKVw8xc/H+SKqfUZoP91uUXI+RLQDhuuIi07FQ==", "user"=>{"email"=>"philippe4", "password"=>"[FILTERED]"}, "id"=>"action_url"}
+  Rendering users/update.html.erb within layouts/application
+  Rendered users/update.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 69ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 17:26:36 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 133ms (Views: 132.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 17:26:37 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 65ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 17:26:45 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"LvT17ydqJuuc0RnJzVmvlr3c0ihVw2lmFeUG8dZkxWjqo523km1L+ivVd68LJDdwHE09dPFxE2x+uyW0tr/1TA==", "user"=>{"email"=>"philippe5", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+
+RuntimeError - :
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/__better_errors/1366db7c3e5ee0c8/variables" for ::1 at 2020-01-27 17:26:45 -0500
+Started POST "/__better_errors/1366db7c3e5ee0c8/eval" for ::1 at 2020-01-27 17:27:02 -0500
+Started POST "/__better_errors/1366db7c3e5ee0c8/eval" for ::1 at 2020-01-27 17:27:22 -0500
+Started GET "/users/1/edit" for ::1 at 2020-01-27 17:39:10 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/users_controller.rb:19:in `edit'
+
+Started POST "/__better_errors/947c903e46e38bd5/variables" for ::1 at 2020-01-27 17:39:10 -0500
+Started GET "/users/5/edit" for ::1 at 2020-01-27 17:39:21 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/users_controller.rb:19:in `edit'
+
+Started POST "/__better_errors/5076e534c30be1e1/variables" for ::1 at 2020-01-27 17:39:21 -0500
+Started POST "/__better_errors/947c903e46e38bd5/variables" for ::1 at 2020-01-27 17:40:39 -0500
+Started GET "/users/1/edit" for ::1 at 2020-01-27 17:40:42 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 7.1ms)
+
+
+
+SyntaxError - syntax error, unexpected tLABEL
+...@output_buffer.append=( action: :edit, user: @user, render "...
+...                        ^~~~~~~
+/Users/PhilippeFonzin/Desktop/aa_classworks/w10d1/music_app/app/views/users/edit.html.erb:3: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...n: :edit, user: @user, render "form" );@output_buffer.safe_a...
+...                              ^:
+  app/views/users/edit.html.erb:3:in `'
+  app/controllers/users_controller.rb:20:in `edit'
+
+Started POST "/__better_errors/469e7f355c256f08/variables" for ::1 at 2020-01-27 17:40:42 -0500
+Started GET "/users/1/edit" for ::1 at 2020-01-27 17:40:44 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+
+
+
+SyntaxError - syntax error, unexpected tLABEL
+...@output_buffer.append=( action: :edit, user: @user, render "...
+...                        ^~~~~~~
+/Users/PhilippeFonzin/Desktop/aa_classworks/w10d1/music_app/app/views/users/edit.html.erb:3: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...n: :edit, user: @user, render "form" );@output_buffer.safe_a...
+...                              ^:
+  app/views/users/edit.html.erb:3:in `'
+  app/controllers/users_controller.rb:20:in `edit'
+
+Started POST "/__better_errors/0b60f8e7d77f8a64/variables" for ::1 at 2020-01-27 17:40:44 -0500
+Started POST "/__better_errors/0b60f8e7d77f8a64/variables" for ::1 at 2020-01-27 17:41:25 -0500
+Started GET "/users/1/edit" for ::1 at 2020-01-27 17:47:14 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (15.8ms)
+  Rendered users/edit.html.erb within layouts/application (18.5ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.8ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/views/users/_form.html.erb:2:in `_app_views_users__form_html_erb___1487061991149474633_70202360597300'
+  app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___472574160154041263_70202360699360'
+  app/controllers/users_controller.rb:20:in `edit'
+
+Started POST "/__better_errors/d139f44e42e1c0af/variables" for ::1 at 2020-01-27 17:47:15 -0500
+Started POST "/__better_errors/d139f44e42e1c0af/eval" for ::1 at 2020-01-27 17:48:22 -0500
+Started POST "/__better_errors/d139f44e42e1c0af/eval" for ::1 at 2020-01-27 17:49:29 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 17:53:27 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 42ms (Views: 30.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 17:53:27 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 102ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 17:53:28 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/5/edit" for ::1 at 2020-01-27 17:53:41 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.1ms)
+  Rendered users/edit.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.1ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/views/users/_form.html.erb:2:in `_app_views_users__form_html_erb___1487061991149474633_70202365788880'
+  app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___472574160154041263_70202374590280'
+  app/controllers/users_controller.rb:20:in `edit'
+
+Started POST "/__better_errors/afb159bf13d23c73/variables" for ::1 at 2020-01-27 17:53:41 -0500
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users" for ::1 at 2020-01-27 17:54:54 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"8Y5cSm77R7HcKHXjrVIDhuzxdpc1OsnGnhVObtIaE+412TQS2/wqoGssG4VrL5tgTWCZy5GIs8z1S20rssEjyg==", "user"=>{"email"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms)
+
+
+
+NoMethodError - undefined method `save' for nil:NilClass:
+  app/controllers/users_controller.rb:11:in `create'
+
+Started POST "/__better_errors/6caa94114da53f4c/variables" for ::1 at 2020-01-27 17:54:54 -0500
+Started POST "/__better_errors/6caa94114da53f4c/eval" for ::1 at 2020-01-27 17:57:10 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 17:59:28 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 44ms (Views: 29.2ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 17:59:40 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"J2ZgdkbdmeKnfRcB21ZrXbSeK2O1iuBEMZ/4PViMRZvjMQgu89r08xB5eWcdK/O7FQ/EPxE4mk5awdt4OFd1vw==", "user"=>{"email"=>"philippe1", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `user_params' for #<UsersController:0x00007fb28604a908>
+Did you mean?  user_path:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/__better_errors/37df29277c902ac5/variables" for ::1 at 2020-01-27 17:59:40 -0500
+Started GET "/users/new" for ::1 at 2020-01-27 18:00:52 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 43ms (Views: 28.2ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 18:01:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"ahKjy77smM0rgMs9aftGDZFFdZQLlB/9GIQ0qqcsQ2KuRcuTC+v13JyEpVuvht7rMNSayK8mZfdz2hfvx/dzRg==", "user"=>{"email"=>"philippe1", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 271ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `user_params' for #<UsersController:0x00007fb287997000>
+Did you mean?  user_path:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/__better_errors/331f524f62d0430e/variables" for ::1 at 2020-01-27 18:01:11 -0500
+Started POST "/__better_errors/331f524f62d0430e/eval" for ::1 at 2020-01-27 18:05:23 -0500

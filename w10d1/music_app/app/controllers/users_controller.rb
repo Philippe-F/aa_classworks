@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.find_by(id: params[:id])
+    @user = User.new(user_params)
 
     if @user.save 
       redirect_to user_url(@user.id) 
@@ -16,13 +16,13 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find_by(@user.id)
+    @user = User.find_by(id: params[:id]) 
     render :edit 
     end 
   end
 
   def update
-    @user = User.find_by(@user.id)
+    @user = User.find_by(id: params[:id]) 
 
     if @user.update_attributes(user_params) 
       redirect_to user_url(@user.id) 
@@ -31,13 +31,13 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.find_by(@user.id)
+    @user = User.find_by(id: params[:id]) 
     @user.destroy
     redirect_to session_url 
   end
 
   private 
   def user_params
-    params.require(:user).permit(:email, :password, :session_token) 
+    params.require(:user).permit(:email, :password) 
   end 
 end
