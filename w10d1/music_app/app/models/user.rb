@@ -10,7 +10,7 @@ class User < ApplicationRecord
         user = User.find_by(email: email) 
         user && user.valid_password?(password) ? user : nil 
     end 
-
+    
     def password=(password)
         @password = password
         self.password_digest = BCrypt::Password.create(password) 
