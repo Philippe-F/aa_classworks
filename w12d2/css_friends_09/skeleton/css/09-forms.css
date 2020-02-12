@@ -1,0 +1,29 @@
+/* PHASE 9: Forms */
+
+.input {
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 500px; 
+  border-radius: 30px; 
+  background-color: gray;
+  align-items: start;
+}
+
+#title {
+  display: block;
+  position: relative;
+  width: 500px;
+  padding: 30px;
+}
+
+.submit {
+  background-color: green;
+  box-shadow: gray;
+  padding: 10px; 
+}
+
+.cancel {
+  padding: 10px;
+}
