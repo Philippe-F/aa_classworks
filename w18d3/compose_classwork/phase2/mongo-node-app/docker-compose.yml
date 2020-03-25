@@ -1,0 +1,28 @@
+version: "3.3"
+
+services: 
+  app: 
+    image: node-phase2
+    build: .
+    ports: 
+      - "8558:3000"
+    environment: 
+      - MONGO_URI=mongodb://mongo_db/node-phase2
+    networks: 
+      - nodemernapp
+
+  db: 
+    image: mongo:3.0.15
+    volumes: 
+      - mongo-db:/data/db
+    networks:
+      nodemernapp:
+        aliases:
+          - "mongo_db"
+
+networks:
+  nodemernapp:
+    driver: bridge
+
+volumes:
+  mongo-db:

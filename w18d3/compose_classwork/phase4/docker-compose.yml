@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  drupal: 
+    image: jacobmeyer/custom-drupal
+    ports: 
+      - 8080:80
+
+  postgresql:
+    environment: 
+      - POSTGRES_PASSWORD=1234567
+    volumes:
+      - drupal-data:/var/lib/postgresql/data
+    image: postgres:12
+
+volumes: 
+  drupal-data:
